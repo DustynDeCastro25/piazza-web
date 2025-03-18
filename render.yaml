@@ -12,9 +12,9 @@ envVars:
   
 fromDatabase:
  - name: piazza-db
-  property: connectionString
+   property: connectionString
  - key: RAILS_MASTER_KEY
-  sync: false
+   sync: false
 
 databases:
  - name: piazza-db
