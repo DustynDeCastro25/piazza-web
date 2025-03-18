@@ -13,6 +13,7 @@ envVars:
     property: connectionString
   - key: RAILS_MASTER_KEY
     sync: false
+    
 databases:
   - name: piazza-db
     plan: free
