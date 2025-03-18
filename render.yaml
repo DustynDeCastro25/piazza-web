@@ -1,5 +1,5 @@
 services:
-  - web
+  - type: web
     name: piazza-web
     env: ruby
     plan: free
@@ -8,15 +8,15 @@ services:
     startCommand: bundle exec puma -C config/deploy/puma.rb
     
 envVars:
-  - DATABASE_URL
+  - key: DATABASE_URL
   
 fromDatabase:
-    name: piazza-db
-    property: connectionString
-  - RAILS_MASTER_KEY
+  - name: piazza-db
+property: connectionString
+  - key: RAILS_MASTER_KEY
     sync: false
 
 databases:
-  - piazza-db
+  - name: piazza-db
     plan: free
     postgresMajorVersion: 14
