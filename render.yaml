@@ -15,5 +15,5 @@ envVars:
     sync: false
 databases:
   - name: piazza-db
-  plan: free
-  postgresMajorVersion: 14
+    plan: free
+    postgresMajorVersion: 14
