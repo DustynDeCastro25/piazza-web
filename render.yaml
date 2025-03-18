@@ -7,10 +7,10 @@ services:
     buildCommand: ./bin/render-build.sh
     startCommand: bundle exec puma -C config/deploy/puma.rb
     
-    envVars:
+envVars:
   - key: DATABASE_URL
   
-    fromDatabase:
+fromDatabase:
       name: piazza-db
       property: connectionString
   - key: RAILS_MASTER_KEY
