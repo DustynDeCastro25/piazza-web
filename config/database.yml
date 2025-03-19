@@ -19,18 +19,16 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-
 development:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
   #username: piazza
 
-  # The password associated with the PostgreSQL role (username).
+  # The password associated with the PostgreSQL role (username).\
   #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -51,9 +49,9 @@ development:
   # Defaults to warning.
   #min_messages: notice
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+  # Warning: The database defined as "test" will be erased and
+  # re-generated from your development database when you run "rake".
+  # Do not set this db to the same as development or production.
 test:
   <<: *default
   database: piazza_test
@@ -80,5 +78,5 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV["PIAZZA_DATABASE_PASSWORD"] %>
