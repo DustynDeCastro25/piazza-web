@@ -80,5 +80,5 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV["PIAZZA_DATABASE_PASSWORD"] %>
